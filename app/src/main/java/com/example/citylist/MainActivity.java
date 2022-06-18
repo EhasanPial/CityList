@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> cityAdapter;
     ArrayList<String> dataList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,9 +63,12 @@ public class MainActivity extends AppCompatActivity {
         cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(MainActivity.this, ShowActivity.class) ;
-                intent.putExtra("cityName", dataList.get(i)) ;
+
+                Intent intent=new Intent(MainActivity.this,ShowActivity.class);
+                intent.putExtra("cityname",dataList.get(i));
                 startActivity(intent);
+
+
             }
         });
 
